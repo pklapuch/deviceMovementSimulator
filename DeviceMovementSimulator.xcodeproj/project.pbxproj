@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3589037C220365CD00BBCC28 /* DeviceMovementSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3589037A220365CD00BBCC28 /* DeviceMovementSimulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35890383220365F000BBCC28 /* LocationManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890382220365F000BBCC28 /* LocationManagerExtensions.swift */; };
+		358903852203688900BBCC28 /* SwizzleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903842203688900BBCC28 /* SwizzleHelper.swift */; };
+		3589038A220369B700BBCC28 /* LocationManagerMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890389220369B700BBCC28 /* LocationManagerMethods.swift */; };
+		3589038C22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589038B22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift */; };
+		3589038F22036DEC00BBCC28 /* MotionManagerMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589038E22036DEC00BBCC28 /* MotionManagerMethods.swift */; };
+		35890393220371B300BBCC28 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890392220371B300BBCC28 /* Errors.swift */; };
+		358903962203743F00BBCC28 /* DeviceMovementSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */; };
+		358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903982203751300BBCC28 /* RequestAuthorization.swift */; };
+		3589039D2203762000BBCC28 /* DefaultLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039C2203762000BBCC28 /* DefaultLocationManager.swift */; };
+		3589039F2203764000BBCC28 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039E2203764000BBCC28 /* Configuration.swift */; };
+		358903A12203771900BBCC28 /* ConfigurationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A02203771900BBCC28 /* ConfigurationExtensions.swift */; };
+		358903A32203779A00BBCC28 /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A22203779A00BBCC28 /* ObjectExtensions.swift */; };
+		358903A5220377C200BBCC28 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A4220377C200BBCC28 /* Constants.swift */; };
+		358903A722037AE800BBCC28 /* LocationManagerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A622037AE800BBCC28 /* LocationManagerObservers.swift */; };
+		358903A92203837400BBCC28 /* LocationSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A82203837400BBCC28 /* LocationSimulator.swift */; };
+		358903AB220385AD00BBCC28 /* MotionManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903AA220385AD00BBCC28 /* MotionManagerExtensions.swift */; };
+		358903AD220387BB00BBCC28 /* DeviceMotionSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903AC220387BB00BBCC28 /* DeviceMotionSimulator.swift */; };
+		358903B02203882300BBCC28 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903AF2203882300BBCC28 /* Simulator.swift */; };
+		358903B2220388E600BBCC28 /* MotionManagerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903B1220388E600BBCC28 /* MotionManagerObservers.swift */; };
+		358903B62203928F00BBCC28 /* RequestAuthorizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903B52203928F00BBCC28 /* RequestAuthorizationExtensions.swift */; };
+		358903B82203964100BBCC28 /* AuthorizationStatusExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903B72203964100BBCC28 /* AuthorizationStatusExtensions.swift */; };
+		358903C022039C6400BBCC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903BF22039C6400BBCC28 /* AppDelegate.swift */; };
+		358903C222039C6400BBCC28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903C122039C6400BBCC28 /* ViewController.swift */; };
+		358903C522039C6400BBCC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358903C322039C6400BBCC28 /* Main.storyboard */; };
+		358903C722039C6500BBCC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358903C622039C6500BBCC28 /* Assets.xcassets */; };
+		358903CA22039C6500BBCC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358903C822039C6500BBCC28 /* LaunchScreen.storyboard */; };
+		358903D522039E8D00BBCC28 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903D422039E8D00BBCC28 /* ViewPresenter.swift */; };
+		358903DA22039EFA00BBCC28 /* MovementDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903D922039EFA00BBCC28 /* MovementDataView.swift */; };
+		358903DC22039F0300BBCC28 /* MovementMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903DB22039F0300BBCC28 /* MovementMapView.swift */; };
+		358903DF2203A1A500BBCC28 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903DE2203A1A500BBCC28 /* PointAnnotation.swift */; };
+		358903E32203B82300BBCC28 /* DeviceMovementSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */; };
+		358903E42203B82300BBCC28 /* DeviceMovementSimulator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		358903EC2203D51000BBCC28 /* TestPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903EB2203D51000BBCC28 /* TestPlayer.swift */; };
+		358903EE2203D66000BBCC28 /* DeviceMotionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		358903CF22039D3F00BBCC28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3589036E220365CD00BBCC28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35890376220365CD00BBCC28;
+			remoteInfo = DeviceMovementSimulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		358903E52203B82300BBCC28 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				358903E42203B82300BBCC28 /* DeviceMovementSimulator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceMovementSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3589037A220365CD00BBCC28 /* DeviceMovementSimulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceMovementSimulator.h; sourceTree = "<group>"; };
+		3589037B220365CD00BBCC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35890382220365F000BBCC28 /* LocationManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerExtensions.swift; sourceTree = "<group>"; };
+		358903842203688900BBCC28 /* SwizzleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzleHelper.swift; sourceTree = "<group>"; };
+		35890389220369B700BBCC28 /* LocationManagerMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerMethods.swift; sourceTree = "<group>"; };
+		3589038B22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangableMethodImplementationProtocol.swift; sourceTree = "<group>"; };
+		3589038E22036DEC00BBCC28 /* MotionManagerMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerMethods.swift; sourceTree = "<group>"; };
+		35890392220371B300BBCC28 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMovementSimulator.swift; sourceTree = "<group>"; };
+		358903982203751300BBCC28 /* RequestAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorization.swift; sourceTree = "<group>"; };
+		3589039C2203762000BBCC28 /* DefaultLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocationManager.swift; sourceTree = "<group>"; };
+		3589039E2203764000BBCC28 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		358903A02203771900BBCC28 /* ConfigurationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationExtensions.swift; sourceTree = "<group>"; };
+		358903A22203779A00BBCC28 /* ObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtensions.swift; sourceTree = "<group>"; };
+		358903A4220377C200BBCC28 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		358903A622037AE800BBCC28 /* LocationManagerObservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerObservers.swift; sourceTree = "<group>"; };
+		358903A82203837400BBCC28 /* LocationSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSimulator.swift; sourceTree = "<group>"; };
+		358903AA220385AD00BBCC28 /* MotionManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerExtensions.swift; sourceTree = "<group>"; };
+		358903AC220387BB00BBCC28 /* DeviceMotionSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionSimulator.swift; sourceTree = "<group>"; };
+		358903AF2203882300BBCC28 /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
+		358903B1220388E600BBCC28 /* MotionManagerObservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerObservers.swift; sourceTree = "<group>"; };
+		358903B52203928F00BBCC28 /* RequestAuthorizationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorizationExtensions.swift; sourceTree = "<group>"; };
+		358903B72203964100BBCC28 /* AuthorizationStatusExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationStatusExtensions.swift; sourceTree = "<group>"; };
+		358903BD22039C6400BBCC28 /* DeviceMovementSimulatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceMovementSimulatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		358903BF22039C6400BBCC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		358903C122039C6400BBCC28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		358903C422039C6400BBCC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		358903C622039C6500BBCC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		358903C922039C6500BBCC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		358903CB22039C6500BBCC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		358903D422039E8D00BBCC28 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
+		358903D922039EFA00BBCC28 /* MovementDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementDataView.swift; sourceTree = "<group>"; };
+		358903DB22039F0300BBCC28 /* MovementMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementMapView.swift; sourceTree = "<group>"; };
+		358903DE2203A1A500BBCC28 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
+		358903EB2203D51000BBCC28 /* TestPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPlayer.swift; sourceTree = "<group>"; };
+		358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35890374220365CD00BBCC28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358903BA22039C6400BBCC28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358903E32203B82300BBCC28 /* DeviceMovementSimulator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3589036D220365CD00BBCC28 = {
+			isa = PBXGroup;
+			children = (
+				35890379220365CD00BBCC28 /* DeviceMovementSimulator */,
+				358903BE22039C6400BBCC28 /* DeviceMovementSimulatorDemo */,
+				35890378220365CD00BBCC28 /* Products */,
+				358903E12203B82000BBCC28 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		35890378220365CD00BBCC28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */,
+				358903BD22039C6400BBCC28 /* DeviceMovementSimulatorDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35890379220365CD00BBCC28 /* DeviceMovementSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				3589039A220375BB00BBCC28 /* Public */,
+				358903862203699500BBCC28 /* Core */,
+				3589037A220365CD00BBCC28 /* DeviceMovementSimulator.h */,
+				358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */,
+				3589037B220365CD00BBCC28 /* Info.plist */,
+			);
+			path = DeviceMovementSimulator;
+			sourceTree = "<group>";
+		};
+		358903862203699500BBCC28 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				358903A4220377C200BBCC28 /* Constants.swift */,
+				3589039B2203760B00BBCC28 /* Manager */,
+				358903AE220387C700BBCC28 /* Utilities */,
+				358903902203712100BBCC28 /* SwizzledClasses */,
+				3589038D22036BD600BBCC28 /* Methods */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3589038D22036BD600BBCC28 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				3589038B22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift */,
+				35890389220369B700BBCC28 /* LocationManagerMethods.swift */,
+				3589038E22036DEC00BBCC28 /* MotionManagerMethods.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		358903902203712100BBCC28 /* SwizzledClasses */ = {
+			isa = PBXGroup;
+			children = (
+				35890382220365F000BBCC28 /* LocationManagerExtensions.swift */,
+				358903AA220385AD00BBCC28 /* MotionManagerExtensions.swift */,
+			);
+			path = SwizzledClasses;
+			sourceTree = "<group>";
+		};
+		3589039A220375BB00BBCC28 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				358903982203751300BBCC28 /* RequestAuthorization.swift */,
+				3589039E2203764000BBCC28 /* Configuration.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		3589039B2203760B00BBCC28 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				358903AF2203882300BBCC28 /* Simulator.swift */,
+				358903B32203912500BBCC28 /* Location */,
+				358903B42203912900BBCC28 /* DeviceMotion */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		358903AE220387C700BBCC28 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				35890392220371B300BBCC28 /* Errors.swift */,
+				358903842203688900BBCC28 /* SwizzleHelper.swift */,
+				358903A22203779A00BBCC28 /* ObjectExtensions.swift */,
+				358903A02203771900BBCC28 /* ConfigurationExtensions.swift */,
+				358903B52203928F00BBCC28 /* RequestAuthorizationExtensions.swift */,
+				358903B72203964100BBCC28 /* AuthorizationStatusExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		358903B32203912500BBCC28 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				358903A82203837400BBCC28 /* LocationSimulator.swift */,
+				358903A622037AE800BBCC28 /* LocationManagerObservers.swift */,
+				3589039C2203762000BBCC28 /* DefaultLocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		358903B42203912900BBCC28 /* DeviceMotion */ = {
+			isa = PBXGroup;
+			children = (
+				358903AC220387BB00BBCC28 /* DeviceMotionSimulator.swift */,
+				358903B1220388E600BBCC28 /* MotionManagerObservers.swift */,
+			);
+			path = DeviceMotion;
+			sourceTree = "<group>";
+		};
+		358903BE22039C6400BBCC28 /* DeviceMovementSimulatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				358903EF2203D66800BBCC28 /* Utilities */,
+				358903D122039E5600BBCC28 /* Presenter */,
+				358903D222039E5B00BBCC28 /* Screen */,
+				358903BF22039C6400BBCC28 /* AppDelegate.swift */,
+				358903C622039C6500BBCC28 /* Assets.xcassets */,
+				358903C822039C6500BBCC28 /* LaunchScreen.storyboard */,
+				358903CB22039C6500BBCC28 /* Info.plist */,
+			);
+			path = DeviceMovementSimulatorDemo;
+			sourceTree = "<group>";
+		};
+		358903D122039E5600BBCC28 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				358903D422039E8D00BBCC28 /* ViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		358903D222039E5B00BBCC28 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				358903D622039ED600BBCC28 /* View */,
+				358903D322039E7400BBCC28 /* Storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		358903D322039E7400BBCC28 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				358903C122039C6400BBCC28 /* ViewController.swift */,
+				358903C322039C6400BBCC28 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		358903D622039ED600BBCC28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				358903D922039EFA00BBCC28 /* MovementDataView.swift */,
+				358903DB22039F0300BBCC28 /* MovementMapView.swift */,
+				358903DE2203A1A500BBCC28 /* PointAnnotation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		358903E12203B82000BBCC28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		358903EF2203D66800BBCC28 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				358903EB2203D51000BBCC28 /* TestPlayer.swift */,
+				358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		35890372220365CD00BBCC28 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3589037C220365CD00BBCC28 /* DeviceMovementSimulator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		35890376220365CD00BBCC28 /* DeviceMovementSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3589037F220365CD00BBCC28 /* Build configuration list for PBXNativeTarget "DeviceMovementSimulator" */;
+			buildPhases = (
+				35890372220365CD00BBCC28 /* Headers */,
+				35890373220365CD00BBCC28 /* Sources */,
+				35890374220365CD00BBCC28 /* Frameworks */,
+				35890375220365CD00BBCC28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceMovementSimulator;
+			productName = DeviceMovementSimulator;
+			productReference = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		358903BC22039C6400BBCC28 /* DeviceMovementSimulatorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 358903CC22039C6500BBCC28 /* Build configuration list for PBXNativeTarget "DeviceMovementSimulatorDemo" */;
+			buildPhases = (
+				358903B922039C6400BBCC28 /* Sources */,
+				358903BA22039C6400BBCC28 /* Frameworks */,
+				358903BB22039C6400BBCC28 /* Resources */,
+				358903E52203B82300BBCC28 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				358903D022039D3F00BBCC28 /* PBXTargetDependency */,
+			);
+			name = DeviceMovementSimulatorDemo;
+			productName = DeviceMovementSimulatorDemo;
+			productReference = 358903BD22039C6400BBCC28 /* DeviceMovementSimulatorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3589036E220365CD00BBCC28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Pawel Klapuch";
+				TargetAttributes = {
+					35890376220365CD00BBCC28 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					358903BC22039C6400BBCC28 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 35890371220365CD00BBCC28 /* Build configuration list for PBXProject "DeviceMovementSimulator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3589036D220365CD00BBCC28;
+			productRefGroup = 35890378220365CD00BBCC28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35890376220365CD00BBCC28 /* DeviceMovementSimulator */,
+				358903BC22039C6400BBCC28 /* DeviceMovementSimulatorDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35890375220365CD00BBCC28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358903BB22039C6400BBCC28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358903CA22039C6500BBCC28 /* LaunchScreen.storyboard in Resources */,
+				358903C722039C6500BBCC28 /* Assets.xcassets in Resources */,
+				358903C522039C6400BBCC28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35890373220365CD00BBCC28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358903B2220388E600BBCC28 /* MotionManagerObservers.swift in Sources */,
+				358903852203688900BBCC28 /* SwizzleHelper.swift in Sources */,
+				3589038A220369B700BBCC28 /* LocationManagerMethods.swift in Sources */,
+				35890383220365F000BBCC28 /* LocationManagerExtensions.swift in Sources */,
+				3589038F22036DEC00BBCC28 /* MotionManagerMethods.swift in Sources */,
+				358903AD220387BB00BBCC28 /* DeviceMotionSimulator.swift in Sources */,
+				35890393220371B300BBCC28 /* Errors.swift in Sources */,
+				358903962203743F00BBCC28 /* DeviceMovementSimulator.swift in Sources */,
+				3589039F2203764000BBCC28 /* Configuration.swift in Sources */,
+				358903A5220377C200BBCC28 /* Constants.swift in Sources */,
+				3589038C22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift in Sources */,
+				358903B82203964100BBCC28 /* AuthorizationStatusExtensions.swift in Sources */,
+				358903AB220385AD00BBCC28 /* MotionManagerExtensions.swift in Sources */,
+				358903A32203779A00BBCC28 /* ObjectExtensions.swift in Sources */,
+				358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */,
+				358903A92203837400BBCC28 /* LocationSimulator.swift in Sources */,
+				358903B02203882300BBCC28 /* Simulator.swift in Sources */,
+				3589039D2203762000BBCC28 /* DefaultLocationManager.swift in Sources */,
+				358903B62203928F00BBCC28 /* RequestAuthorizationExtensions.swift in Sources */,
+				358903A722037AE800BBCC28 /* LocationManagerObservers.swift in Sources */,
+				358903A12203771900BBCC28 /* ConfigurationExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358903B922039C6400BBCC28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358903D522039E8D00BBCC28 /* ViewPresenter.swift in Sources */,
+				358903DF2203A1A500BBCC28 /* PointAnnotation.swift in Sources */,
+				358903DA22039EFA00BBCC28 /* MovementDataView.swift in Sources */,
+				358903DC22039F0300BBCC28 /* MovementMapView.swift in Sources */,
+				358903C222039C6400BBCC28 /* ViewController.swift in Sources */,
+				358903EE2203D66000BBCC28 /* DeviceMotionExtensions.swift in Sources */,
+				358903C022039C6400BBCC28 /* AppDelegate.swift in Sources */,
+				358903EC2203D51000BBCC28 /* TestPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		358903D022039D3F00BBCC28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35890376220365CD00BBCC28 /* DeviceMovementSimulator */;
+			targetProxy = 358903CF22039D3F00BBCC28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		358903C322039C6400BBCC28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				358903C422039C6400BBCC28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		358903C822039C6500BBCC28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				358903C922039C6500BBCC28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3589037D220365CD00BBCC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3589037E220365CD00BBCC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		35890380220365CD00BBCC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DeviceMovementSimulator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelklapuch.DeviceMovementSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35890381220365CD00BBCC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DeviceMovementSimulator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelklapuch.DeviceMovementSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		358903CD22039C6500BBCC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				INFOPLIST_FILE = DeviceMovementSimulatorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelklapuch.DeviceMovementSimulatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		358903CE22039C6500BBCC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				INFOPLIST_FILE = DeviceMovementSimulatorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pawelklapuch.DeviceMovementSimulatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35890371220365CD00BBCC28 /* Build configuration list for PBXProject "DeviceMovementSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3589037D220365CD00BBCC28 /* Debug */,
+				3589037E220365CD00BBCC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3589037F220365CD00BBCC28 /* Build configuration list for PBXNativeTarget "DeviceMovementSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35890380220365CD00BBCC28 /* Debug */,
+				35890381220365CD00BBCC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		358903CC22039C6500BBCC28 /* Build configuration list for PBXNativeTarget "DeviceMovementSimulatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				358903CD22039C6500BBCC28 /* Debug */,
+				358903CE22039C6500BBCC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3589036E220365CD00BBCC28 /* Project object */;
+}

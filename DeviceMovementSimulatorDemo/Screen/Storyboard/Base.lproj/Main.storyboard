@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeviceMovementSimulatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-OW-0S0" customClass="MovementMapView" customModule="DeviceMovementSimulatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="8" y="208" width="359" height="451"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRu-iM-MrQ">
+                                <rect key="frame" x="8" y="28" width="359" height="40"/>
+                                <color key="backgroundColor" red="0.82984822988510132" green="0.9188922643661499" blue="0.55827617645263672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Zs-d0-AoZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Start Simulation">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="simulationToggleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4df-BQ-jng"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-13-lum" customClass="MovementDataView" customModule="DeviceMovementSimulatorDemo" customModuleProvider="target">
+                                <rect key="frame" x="8" y="76" width="359" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-vN-9hV">
+                                        <rect key="frame" x="8" y="8" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-BA-2dn">
+                                        <rect key="frame" x="8" y="37" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acceleration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-IE-CtJ">
+                                        <rect key="frame" x="8" y="66" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-3s-9R0">
+                                        <rect key="frame" x="8" y="95" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tmy-BA-2dn" secondAttribute="trailing" constant="8" id="0q2-TS-EqT"/>
+                                    <constraint firstItem="Yd5-IE-CtJ" firstAttribute="leading" secondItem="BGA-13-lum" secondAttribute="leading" constant="8" id="5vj-j1-Fn3"/>
+                                    <constraint firstAttribute="trailing" secondItem="jjr-3s-9R0" secondAttribute="trailing" constant="8" id="HAL-cn-fVd"/>
+                                    <constraint firstAttribute="trailing" secondItem="o9o-vN-9hV" secondAttribute="trailing" constant="8" id="Lfg-FF-rTf"/>
+                                    <constraint firstAttribute="bottom" secondItem="jjr-3s-9R0" secondAttribute="bottom" constant="8" id="TZA-6g-X5W"/>
+                                    <constraint firstItem="jjr-3s-9R0" firstAttribute="leading" secondItem="BGA-13-lum" secondAttribute="leading" constant="8" id="V90-wT-cVa"/>
+                                    <constraint firstItem="o9o-vN-9hV" firstAttribute="top" secondItem="BGA-13-lum" secondAttribute="top" constant="8" id="bzG-Om-Ire"/>
+                                    <constraint firstItem="jjr-3s-9R0" firstAttribute="top" secondItem="Yd5-IE-CtJ" secondAttribute="bottom" constant="8" id="dhj-Pw-fgc"/>
+                                    <constraint firstItem="tmy-BA-2dn" firstAttribute="top" secondItem="o9o-vN-9hV" secondAttribute="bottom" constant="8" id="faF-My-Tgd"/>
+                                    <constraint firstItem="Yd5-IE-CtJ" firstAttribute="top" secondItem="tmy-BA-2dn" secondAttribute="bottom" constant="8" id="iT4-G1-r1v"/>
+                                    <constraint firstItem="tmy-BA-2dn" firstAttribute="leading" secondItem="BGA-13-lum" secondAttribute="leading" constant="8" id="mMh-GX-OZV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yd5-IE-CtJ" secondAttribute="trailing" constant="8" id="qo8-Ok-PrQ"/>
+                                    <constraint firstItem="o9o-vN-9hV" firstAttribute="leading" secondItem="BGA-13-lum" secondAttribute="leading" constant="8" id="vQY-gz-m3U"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="accelerationLabel" destination="Yd5-IE-CtJ" id="qY6-1m-RUn"/>
+                                    <outlet property="latitudeLabel" destination="o9o-vN-9hV" id="JSp-F3-PyC"/>
+                                    <outlet property="longitudeLabel" destination="tmy-BA-2dn" id="fVq-Vb-n2A"/>
+                                    <outlet property="rotationLabel" destination="jjr-3s-9R0" id="bwO-Dy-pOx"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qA9-OW-0S0" secondAttribute="bottom" constant="8" id="0LF-dF-v1v"/>
+                            <constraint firstItem="bRu-iM-MrQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="7r1-GP-XS8"/>
+                            <constraint firstItem="BGA-13-lum" firstAttribute="top" secondItem="bRu-iM-MrQ" secondAttribute="bottom" constant="8" id="Lbu-du-xLb"/>
+                            <constraint firstItem="BGA-13-lum" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="O4l-jy-c7q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qA9-OW-0S0" secondAttribute="trailing" constant="8" id="Z2A-fI-eZP"/>
+                            <constraint firstItem="qA9-OW-0S0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="dX7-35-Cz5"/>
+                            <constraint firstItem="qA9-OW-0S0" firstAttribute="top" secondItem="BGA-13-lum" secondAttribute="bottom" constant="8" id="f3h-fg-jTO"/>
+                            <constraint firstItem="bRu-iM-MrQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="o5o-dE-ZL6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BGA-13-lum" secondAttribute="trailing" constant="8" id="ug0-MR-t9F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRu-iM-MrQ" secondAttribute="trailing" constant="8" id="vBD-ms-Jvh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataView" destination="BGA-13-lum" id="qOg-8D-5Yh"/>
+                        <outlet property="mapView" destination="qA9-OW-0S0" id="9bI-QL-Li8"/>
+                        <outlet property="simulationToggleButton" destination="bRu-iM-MrQ" id="feF-zX-qw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
