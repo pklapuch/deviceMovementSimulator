@@ -16,11 +16,9 @@ public class Configuration: NSObject {
         Background operation is only possible provided user has accepted privacy settings
      */
     let simulateBackgroundUpdates: Bool
-    let preferredAuthorization: RequestAuthorization
     
-    public init(simulateBackgroundUpdates: Bool? = nil, preferredAuthorization: RequestAuthorization? = nil) {
+    public init(simulateBackgroundUpdates: Bool? = nil) {
         
         self.simulateBackgroundUpdates = simulateBackgroundUpdates ?? false
-        self.preferredAuthorization = preferredAuthorization ?? .whenInUse
     }
 }

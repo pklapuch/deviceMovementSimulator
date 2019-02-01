@@ -31,6 +31,7 @@ internal class RealLocationManager: NSObject {
     private var locationServicesEnabled = false
     private var shouldTrackLocation = false
     
+    private var preferredRequestAuthorization = RequestAuthorization.whenInUse
     private var authorizationType = AuthorizationType.unknown
     private var didRequestAuthorization = false
     
@@ -102,7 +103,7 @@ internal class RealLocationManager: NSObject {
                     unlockProcessing(shouldProcessQueuedState: false)
                     didRequestAuthorization = true
                     state = .waitingForAuthorization
-                    requestAuthorization(configuration.preferredAuthorization)
+                    requestAuthorization(preferredRequestAuthorization)
                 } else {
                     unlockProcessing(shouldProcessQueuedState: true)
                 }
@@ -171,12 +172,12 @@ internal class RealLocationManager: NSObject {
 }
 
 extension RealLocationManager: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // No action needed
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    internal func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         queue.async {
             self.state = .idle

@@ -23,14 +23,14 @@ extension CMMotionManager {
     
     internal static func swizzleMethods() throws {
         
-        guard !hasSwizzledMethods else { throw Error.invalidState }
+        guard !hasSwizzledMethods else { throw Error.simulatorAlreadyStarted }
         hasSwizzledMethods = true
         methods.forEach { Swizzle.swizzleInstance(CMMotionManager(), method: $0) }
     }
     
     internal static func unswizzleMethods() throws {
         
-        guard hasSwizzledMethods else { throw Error.invalidState }
+        guard hasSwizzledMethods else { throw Error.simulatorAlreadyStopped }
         hasSwizzledMethods = false
         methods.forEach { Swizzle.unswizzleInstance(CMMotionManager(), method: $0) }
     }
@@ -45,17 +45,17 @@ extension CMMotionManager {
 
 extension CMMotionManager {
     
-    @objc func customStartDeviceMotionUpdates() {
+    @objc internal func customStartDeviceMotionUpdates() {
         
         CMMotionManager.swizzleDelegate?.swizzledMotionManagerDidStartDeviceMotionUpdatesWithHandler(nil)
     }
     
-    @objc func customStartDeviceMotionUpdates(to queue: OperationQueue, withHandler handler: @escaping CMDeviceMotionHandler) {
+    @objc internal func customStartDeviceMotionUpdates(to queue: OperationQueue, withHandler handler: @escaping CMDeviceMotionHandler) {
         
         CMMotionManager.swizzleDelegate?.swizzledMotionManagerDidStartDeviceMotionUpdatesWithHandler(handler)
     }
     
-    @objc var customDeviceMotionData: CMDeviceMotion? {
+    @objc internal var customDeviceMotionData: CMDeviceMotion? {
         
         return CMMotionManager.swizzleDelegate?.swizzledMotionManagerDidRequestDeviceMotionData()
     }

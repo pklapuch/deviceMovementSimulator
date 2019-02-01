@@ -9,5 +9,7 @@
 import Foundation
 
 internal enum Error: Swift.Error {
-    case invalidState
+    
+    case simulatorAlreadyStarted
+    case simulatorAlreadyStopped
 }

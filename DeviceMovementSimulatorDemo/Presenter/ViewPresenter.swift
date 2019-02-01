@@ -45,7 +45,7 @@ class ViewPresenter: NSObject {
     }
     
     private func startSimulation() {
-        let configuration = Configuration(simulateBackgroundUpdates: true, preferredAuthorization: .whenInUse)
+        let configuration = Configuration(simulateBackgroundUpdates: false)
         try! DeviceMovementSimulator.shared.enableWith(configuration)
     }
     

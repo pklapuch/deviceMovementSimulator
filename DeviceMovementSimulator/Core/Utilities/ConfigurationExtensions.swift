@@ -17,6 +17,7 @@ extension Configuration {
     }
     
     internal func createLocationManager() -> CLLocationManager {
+        
         let manager = CLLocationManager()
         
         manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation

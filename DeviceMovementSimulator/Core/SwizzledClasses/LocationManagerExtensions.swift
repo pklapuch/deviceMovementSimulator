@@ -24,7 +24,7 @@ extension CLLocationManager {
     
     internal static func swizzleMethods() throws {
         
-        guard !hasSwizzledMethods else { throw Error.invalidState }
+        guard !hasSwizzledMethods else { throw Error.simulatorAlreadyStarted }
         hasSwizzledMethods = true
         methods.forEach { Swizzle.swizzleInstance(CLLocationManager(), method: $0) }
         classMethods.forEach { Swizzle.swizzleClass(CLLocationManager.self, method: $0) }
@@ -32,7 +32,7 @@ extension CLLocationManager {
     
     internal static func unswizzleMethods() throws {
         
-        guard hasSwizzledMethods else { throw Error.invalidState }
+        guard hasSwizzledMethods else { throw Error.simulatorAlreadyStopped }
         hasSwizzledMethods = false
         methods.forEach { Swizzle.unswizzleInstance(CLLocationManager(), method: $0) }
         classMethods.forEach { Swizzle.unswizzleClass(CLLocationManager.self, method: $0) }

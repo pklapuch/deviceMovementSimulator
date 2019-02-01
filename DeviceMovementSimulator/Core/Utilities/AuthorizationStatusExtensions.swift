@@ -9,7 +9,9 @@
 import CoreLocation
 
 extension CLAuthorizationStatus {
+    
     internal var authorizationType: RealLocationManager.AuthorizationType {
+        
         switch self {
         case .notDetermined:
             return .unknown

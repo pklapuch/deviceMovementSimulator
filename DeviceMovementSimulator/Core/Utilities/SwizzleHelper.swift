@@ -40,10 +40,12 @@ extension Swizzle {
     // Mark - Class methods
     
     internal static func swizzleClass(_ aClass: AnyClass, method: ExchangableMethodImplementationProtocol) {
+        
         exchangeClassSelectorInClass(aClass: aClass, source: method.original, dest: method.custom)
     }
     
     internal static func unswizzleClass(_ aClass: AnyClass, method: ExchangableMethodImplementationProtocol) {
+        
         exchangeClassSelectorInClass(aClass: aClass, source: method.custom, dest: method.original)
     }
     

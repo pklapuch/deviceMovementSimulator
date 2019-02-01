@@ -12,6 +12,7 @@ import CoreLocation
 extension RequestAuthorization {
     
     internal var status: CLAuthorizationStatus {
+        
         switch self {
         case .whenInUse:
             return .authorizedWhenInUse
