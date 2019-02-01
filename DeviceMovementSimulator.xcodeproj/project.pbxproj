@@ -16,7 +16,7 @@
 		35890393220371B300BBCC28 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890392220371B300BBCC28 /* Errors.swift */; };
 		358903962203743F00BBCC28 /* DeviceMovementSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */; };
 		358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903982203751300BBCC28 /* RequestAuthorization.swift */; };
-		3589039D2203762000BBCC28 /* DefaultLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039C2203762000BBCC28 /* DefaultLocationManager.swift */; };
+		3589039D2203762000BBCC28 /* RealLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039C2203762000BBCC28 /* RealLocationManager.swift */; };
 		3589039F2203764000BBCC28 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039E2203764000BBCC28 /* Configuration.swift */; };
 		358903A12203771900BBCC28 /* ConfigurationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A02203771900BBCC28 /* ConfigurationExtensions.swift */; };
 		358903A32203779A00BBCC28 /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903A22203779A00BBCC28 /* ObjectExtensions.swift */; };
@@ -80,7 +80,7 @@
 		35890392220371B300BBCC28 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMovementSimulator.swift; sourceTree = "<group>"; };
 		358903982203751300BBCC28 /* RequestAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorization.swift; sourceTree = "<group>"; };
-		3589039C2203762000BBCC28 /* DefaultLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocationManager.swift; sourceTree = "<group>"; };
+		3589039C2203762000BBCC28 /* RealLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealLocationManager.swift; sourceTree = "<group>"; };
 		3589039E2203764000BBCC28 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		358903A02203771900BBCC28 /* ConfigurationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationExtensions.swift; sourceTree = "<group>"; };
 		358903A22203779A00BBCC28 /* ObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtensions.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 			children = (
 				358903A82203837400BBCC28 /* LocationSimulator.swift */,
 				358903A622037AE800BBCC28 /* LocationManagerObservers.swift */,
-				3589039C2203762000BBCC28 /* DefaultLocationManager.swift */,
+				3589039C2203762000BBCC28 /* RealLocationManager.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -373,6 +373,11 @@
 					};
 					358903BC22039C6400BBCC28 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -437,7 +442,7 @@
 				358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */,
 				358903A92203837400BBCC28 /* LocationSimulator.swift in Sources */,
 				358903B02203882300BBCC28 /* Simulator.swift in Sources */,
-				3589039D2203762000BBCC28 /* DefaultLocationManager.swift in Sources */,
+				3589039D2203762000BBCC28 /* RealLocationManager.swift in Sources */,
 				358903B62203928F00BBCC28 /* RequestAuthorizationExtensions.swift in Sources */,
 				358903A722037AE800BBCC28 /* LocationManagerObservers.swift in Sources */,
 				358903A12203771900BBCC28 /* ConfigurationExtensions.swift in Sources */,

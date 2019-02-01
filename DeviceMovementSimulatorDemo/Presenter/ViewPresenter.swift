@@ -45,7 +45,8 @@ class ViewPresenter: NSObject {
     }
     
     private func startSimulation() {
-        try! DeviceMovementSimulator.shared.enable()
+        let configuration = Configuration(simulateBackgroundUpdates: true, preferredAuthorization: .whenInUse)
+        try! DeviceMovementSimulator.shared.enableWith(configuration)
     }
     
     private func startTracking() {

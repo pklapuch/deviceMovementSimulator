@@ -1,5 +1,5 @@
 //
-//  DefaultLocationManager.swift
+//  RealLocationManager.swift
 //  DeviceMovementSimulator
 //
 //  Created by Pawel Klapuch on 31/01/2019.
@@ -8,11 +8,7 @@
 
 import CoreLocation
 
-internal protocol DefaultLocationManagerProtocol: class {
-    func defaultLocationManagerDidStartTrackingLocation(_ manager: DefaultLocationManager)
-}
-
-internal class DefaultLocationManager: NSObject {
+internal class RealLocationManager: NSObject {
     
     fileprivate enum ManagerState {
         case idle
@@ -27,41 +23,46 @@ internal class DefaultLocationManager: NSObject {
         case always
     }
 
-    private let manager: CLLocationManager
-    private let queue = DispatchQueue(label: "\(productIdentifier).\(DefaultLocationManager.nameOfClass)")
-    internal weak var delegate: DefaultLocationManagerProtocol?
+    private let configuration: Configuration
+    private var manager: CLLocationManager?
+    private let queue = DispatchQueue(label: "\(productIdentifier).\(RealLocationManager.nameOfClass)")
     
     private var state: ManagerState = .idle
     private var locationServicesEnabled = false
     private var shouldTrackLocation = false
     
-    private var preferredAuthorizationType: RequestAuthorization
     private var authorizationType = AuthorizationType.unknown
     private var didRequestAuthorization = false
     
     private var processing = false
     private var hasQueuedUpdate = false
     
-    init(configuration: Configuration, delegate: DefaultLocationManagerProtocol) {
-        
-        self.manager = configuration.createLocationManager()
-        self.preferredAuthorizationType = configuration.preferredAuthorization
-        self.delegate = delegate
+    init(configuration: Configuration) {
+        self.configuration = configuration
     }
     
     internal func start() {
         
-        queue.async {
-            self.manager.delegate = self
-            self.shouldTrackLocation = true
-            self.updateState()
+        DispatchQueue.main.async {
+            self.createInitialManager()
+            self.queue.async {
+                self.shouldTrackLocation = true
+                self.updateState()
+            }
+        }
+    }
+    
+    private func createInitialManager() {
+        
+        if (self.manager == nil) {
+            self.manager = self.configuration.createLocationManager()
+            self.manager?.realSetDelegate(self)
         }
     }
     
     internal func stop() {
         
-        queue.async {
-            self.manager.delegate = nil
+        self.queue.async {
             self.shouldTrackLocation = false
             self.updateState()
         }
@@ -70,7 +71,7 @@ internal class DefaultLocationManager: NSObject {
     private func updateState() {
         
         DispatchQueue.main.async {
-            self.locationServicesEnabled = CLLocationManager.locationServicesEnabled()
+            self.locationServicesEnabled = CLLocationManager.realLocationServicesEnabled()
             self.queue.async {
                 self.processNextState()
             }
@@ -101,7 +102,7 @@ internal class DefaultLocationManager: NSObject {
                     unlockProcessing(shouldProcessQueuedState: false)
                     didRequestAuthorization = true
                     state = .waitingForAuthorization
-                    requestAuthorization(preferredAuthorizationType)
+                    requestAuthorization(configuration.preferredAuthorization)
                 } else {
                     unlockProcessing(shouldProcessQueuedState: true)
                 }
@@ -143,18 +144,17 @@ internal class DefaultLocationManager: NSObject {
         DispatchQueue.main.async {
             switch authorization {
             case .always:
-                self.manager.requestAlwaysAuthorization()
+                self.manager?.realRequestAlwaysAuthorization()
             case .whenInUse:
-                self.manager.requestWhenInUseAuthorization()
+                self.manager?.realRequestWhenInUseAuthorization()
             }
         }
     }
     
     private func startTrackingLocation(block:(()->())? = nil) {
         DispatchQueue.main.async {
-            self.manager.startUpdatingLocation()
+            self.manager?.realStartUpdatingLocation()
             self.queue.async {
-                self.delegate?.defaultLocationManagerDidStartTrackingLocation(self)
                 block?()
             }
         }
@@ -162,7 +162,7 @@ internal class DefaultLocationManager: NSObject {
     
     private func stopTrackingLocation(block:(()->())? = nil) {
         DispatchQueue.main.async {
-            self.manager.stopUpdatingLocation()
+            self.manager?.realStopUpdatingLocation()
             self.queue.async {
                 block?()
             }
@@ -170,7 +170,7 @@ internal class DefaultLocationManager: NSObject {
     }
 }
 
-extension DefaultLocationManager: CLLocationManagerDelegate {
+extension RealLocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         // No action needed
@@ -179,37 +179,9 @@ extension DefaultLocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         queue.async {
+            self.state = .idle
             self.authorizationType = status.authorizationType
             self.updateState()
-        }
-    }
-}
-
-extension DefaultLocationManager {
-    
-    var isTrackingPossible: Bool {
-        get {
-            var state = false
-            queue.sync {
-                // NOTE: If authorizationType == .denied => not possible
-                // NOTE: If authorizationType == .unknown -> we can assume that it's possible to track location
-                // In worst case 'request authorization' will return 'denied' state which will be handled
-                
-                if (self.authorizationType != .denied) {
-                    
-                    let dispatchGroup = DispatchGroup()
-                    dispatchGroup.enter()
-                    
-                    DispatchQueue.main.async {
-                        state = CLLocationManager.locationServicesEnabled()
-                        dispatchGroup.leave()
-                    }
-                    
-                    dispatchGroup.wait()
-                }
-            }
-            
-            return state
         }
     }
 }

@@ -20,6 +20,11 @@ extension CLLocationManager {
         static let stopLocationUpdates = StopLocationUpdatesMethod()
     }
     
+    internal struct ClassMethods {
+        
+        static let locationServicesEnabled = LocationServicesEnabled()
+    }
+    
     internal struct SetDelegateMethod: ExchangableMethodImplementationProtocol {
         
         var original: Selector {
@@ -72,6 +77,17 @@ extension CLLocationManager {
         
         var custom: Selector {
             return #selector(customStopUpdatingLocation)
+        }
+    }
+    
+    internal struct LocationServicesEnabled: ExchangableMethodImplementationProtocol {
+        
+        var original: Selector {
+            return #selector(CLLocationManager.locationServicesEnabled)
+        }
+        
+        var custom: Selector {
+            return #selector(CLLocationManager.customLocationServicesEnabled)
         }
     }
 }

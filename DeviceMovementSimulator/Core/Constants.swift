@@ -8,4 +8,4 @@
 
 import Foundation
 
-let productIdentifier = "com.dms"
+internal let productIdentifier = "com.dms"

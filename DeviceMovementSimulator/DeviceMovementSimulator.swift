@@ -15,22 +15,12 @@ public class DeviceMovementSimulator: NSObject {
     @objc(sharedManager)
     public static let shared = DeviceMovementSimulator()
     
-    public typealias PrepareBackgroundUpdates = () -> Void
-
-    /// Optional feature
-    /// Request background mode support prior to starting simulation
-    ///
-    @objc(requestBackgroundModeWithConfiguration:completion:)
-    public func requestBackgroundModeWith(_ configuration: Configuration, completion: PrepareBackgroundUpdates) {
-        processConfiguration(configuration, completion: completion)
-    }
-    
     /// Applies method swizzling
     /// Throws if simulator is already enabled
     ///
-    @objc(enableWithError:)
-    public func enable() throws {
-        try start()
+    @objc(enableWithConfiguration:error:)
+    public func enableWith(_ configuration: Configuration) throws {
+        try startWithConfiguration(configuration)
     }
     
     /// Undos method swizzling

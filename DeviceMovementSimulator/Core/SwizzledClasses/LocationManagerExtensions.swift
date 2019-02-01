@@ -27,6 +27,7 @@ extension CLLocationManager {
         guard !hasSwizzledMethods else { throw Error.invalidState }
         hasSwizzledMethods = true
         methods.forEach { Swizzle.swizzleInstance(CLLocationManager(), method: $0) }
+        classMethods.forEach { Swizzle.swizzleClass(CLLocationManager.self, method: $0) }
     }
     
     internal static func unswizzleMethods() throws {
@@ -34,6 +35,7 @@ extension CLLocationManager {
         guard hasSwizzledMethods else { throw Error.invalidState }
         hasSwizzledMethods = false
         methods.forEach { Swizzle.unswizzleInstance(CLLocationManager(), method: $0) }
+        classMethods.forEach { Swizzle.unswizzleClass(CLLocationManager.self, method: $0) }
     }
     
     fileprivate static let methods: [ExchangableMethodImplementationProtocol] = [
@@ -43,6 +45,11 @@ extension CLLocationManager {
         Methods.requestAuthorizationAlways,
         Methods.startLocationUpdates,
         Methods.stopLocationUpdates
+    ]
+    
+    fileprivate static let classMethods: [ExchangableMethodImplementationProtocol] = [
+        
+        ClassMethods.locationServicesEnabled
     ]
 }
 
@@ -71,5 +78,67 @@ extension CLLocationManager {
     @objc internal func customStopUpdatingLocation() {
         
         CLLocationManager.swizzleDelegate?.swizzledLocationManagerStopTracking(self)
+    }
+    
+    @objc internal static func customLocationServicesEnabled() -> Bool {
+        
+        return true
+    }
+}
+
+extension CLLocationManager {
+    
+    internal func realSetDelegate(_ delegate: CLLocationManagerDelegate) {
+        
+        if (CLLocationManager.hasSwizzledMethods) {
+            customSetDelegate(delegate)
+        } else {
+            self.delegate = delegate
+        }
+    }
+    
+    internal func realRequestWhenInUseAuthorization() {
+     
+        if (CLLocationManager.hasSwizzledMethods) {
+            customRequestWhenInUseAuthorization()
+        } else {
+            requestWhenInUseAuthorization()
+        }
+    }
+    
+    internal func realRequestAlwaysAuthorization() {
+        
+        if (CLLocationManager.hasSwizzledMethods) {
+            customRequestAlwaysAuthorization()
+        } else {
+            requestAlwaysAuthorization()
+        }
+    }
+    
+    internal func realStartUpdatingLocation() {
+        
+        if (CLLocationManager.hasSwizzledMethods) {
+            customStartUpdatingLocation()
+        } else {
+            startUpdatingLocation()
+        }
+    }
+    
+    internal func realStopUpdatingLocation() {
+        
+        if (CLLocationManager.hasSwizzledMethods) {
+            customStopUpdatingLocation()
+        } else {
+            stopUpdatingLocation()
+        }
+    }
+    
+    internal static func realLocationServicesEnabled() -> Bool {
+        
+        if (CLLocationManager.hasSwizzledMethods) {
+            return CLLocationManager.customLocationServicesEnabled()
+        } else {
+            return CLLocationManager.locationServicesEnabled()
+        }
     }
 }

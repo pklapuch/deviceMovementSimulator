@@ -13,38 +13,28 @@ import CoreMotion
 extension DeviceMovementSimulator {
     
     internal static let queue = DispatchQueue(label: "\(productIdentifier).\(DeviceMovementSimulator.nameOfClass)")
-    internal static var defaultLocationManager: DefaultLocationManager?
-    fileprivate static var prepareBackgroundUpdatesBlock: PrepareBackgroundUpdates?
+    internal static var realLocationManager: RealLocationManager?
     
-    internal func processConfiguration(_ configuration: Configuration, completion: PrepareBackgroundUpdates) {
-        DeviceMovementSimulator.defaultLocationManager = DefaultLocationManager(configuration: configuration, delegate: self)
-        DeviceMovementSimulator.defaultLocationManager?.start()
-    }
-    
-    internal func start() throws {
+    internal func startWithConfiguration(_ configuration: Configuration) throws {
         
         do {
             try startLocationSimulation()
             try startDeviceMotionSimulation()
         }
+        
+        if (configuration.simulateBackgroundUpdates) {
+            DeviceMovementSimulator.realLocationManager = RealLocationManager(configuration: configuration)
+            DeviceMovementSimulator.realLocationManager?.start()
+        }
     }
     
     internal func stop() throws {
         
+        DeviceMovementSimulator.realLocationManager?.stop()
+        
         do {
             try stopLocationSimulation()
             try stopDeviceMotionSimulation()
-        }
-    }
-}
-
-extension DeviceMovementSimulator: DefaultLocationManagerProtocol {
-    func defaultLocationManagerDidStartTrackingLocation(_ manager: DefaultLocationManager) {
-        DeviceMovementSimulator.queue.async {
-            if let block = DeviceMovementSimulator.prepareBackgroundUpdatesBlock {
-                block()
-            }
-            DeviceMovementSimulator.prepareBackgroundUpdatesBlock = nil
         }
     }
 }

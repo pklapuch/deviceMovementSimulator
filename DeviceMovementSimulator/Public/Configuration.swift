@@ -11,9 +11,9 @@ import Foundation
 @objc(DMSConfiguration)
 public class Configuration: NSObject {
     
-    /** If false, simulation will not subscribe to system location updates -> app cann be suspended while in bg
-        If true, simulation will register background updates with system which will trigger privacy alerts and should keep app running in bg
-        It is user's responsibility to accept privacy settings popup when requested by system - otherwise app can be suspended anyways.
+    /** If false, simulation will not subscribe to system location updates -> simulation will only work in foreground
+        If true, simulation will register background updates with system -> simulation can run in background
+        Background operation is only possible provided user has accepted privacy settings
      */
     let simulateBackgroundUpdates: Bool
     let preferredAuthorization: RequestAuthorization
