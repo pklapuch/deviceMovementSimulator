@@ -23,14 +23,14 @@ extension CMMotionManager {
     
     internal static func swizzleMethods() throws {
         
-        guard !hasSwizzledMethods else { throw Error.simulatorAlreadyStarted }
+        guard !hasSwizzledMethods else { throw Error.alreadyEnabled }
         hasSwizzledMethods = true
         methods.forEach { Swizzle.swizzleInstance(CMMotionManager(), method: $0) }
     }
     
     internal static func unswizzleMethods() throws {
         
-        guard hasSwizzledMethods else { throw Error.simulatorAlreadyStopped }
+        guard hasSwizzledMethods else { throw Error.alreadyDisabled }
         hasSwizzledMethods = false
         methods.forEach { Swizzle.unswizzleInstance(CMMotionManager(), method: $0) }
     }

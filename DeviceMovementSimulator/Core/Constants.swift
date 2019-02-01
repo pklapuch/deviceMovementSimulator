@@ -9,3 +9,4 @@
 import Foundation
 
 internal let productIdentifier = "com.dms"
+internal let productDomain = "com.dms"

@@ -13,7 +13,6 @@
 		3589038A220369B700BBCC28 /* LocationManagerMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890389220369B700BBCC28 /* LocationManagerMethods.swift */; };
 		3589038C22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589038B22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift */; };
 		3589038F22036DEC00BBCC28 /* MotionManagerMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589038E22036DEC00BBCC28 /* MotionManagerMethods.swift */; };
-		35890393220371B300BBCC28 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890392220371B300BBCC28 /* Errors.swift */; };
 		358903962203743F00BBCC28 /* DeviceMovementSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */; };
 		358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903982203751300BBCC28 /* RequestAuthorization.swift */; };
 		3589039D2203762000BBCC28 /* RealLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589039C2203762000BBCC28 /* RealLocationManager.swift */; };
@@ -42,6 +41,7 @@
 		358903E42203B82300BBCC28 /* DeviceMovementSimulator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		358903EC2203D51000BBCC28 /* TestPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903EB2203D51000BBCC28 /* TestPlayer.swift */; };
 		358903EE2203D66000BBCC28 /* DeviceMotionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */; };
+		358903F12204A10F00BBCC28 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903F02204A10F00BBCC28 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		35890389220369B700BBCC28 /* LocationManagerMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerMethods.swift; sourceTree = "<group>"; };
 		3589038B22036B0200BBCC28 /* ExchangableMethodImplementationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangableMethodImplementationProtocol.swift; sourceTree = "<group>"; };
 		3589038E22036DEC00BBCC28 /* MotionManagerMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerMethods.swift; sourceTree = "<group>"; };
-		35890392220371B300BBCC28 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		358903952203743F00BBCC28 /* DeviceMovementSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMovementSimulator.swift; sourceTree = "<group>"; };
 		358903982203751300BBCC28 /* RequestAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorization.swift; sourceTree = "<group>"; };
 		3589039C2203762000BBCC28 /* RealLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealLocationManager.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		358903DE2203A1A500BBCC28 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		358903EB2203D51000BBCC28 /* TestPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPlayer.swift; sourceTree = "<group>"; };
 		358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionExtensions.swift; sourceTree = "<group>"; };
+		358903F02204A10F00BBCC28 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +194,7 @@
 			children = (
 				358903982203751300BBCC28 /* RequestAuthorization.swift */,
 				3589039E2203764000BBCC28 /* Configuration.swift */,
+				358903F02204A10F00BBCC28 /* Error.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 		358903AE220387C700BBCC28 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				35890392220371B300BBCC28 /* Errors.swift */,
 				358903842203688900BBCC28 /* SwizzleHelper.swift */,
 				358903A22203779A00BBCC28 /* ObjectExtensions.swift */,
 				358903A02203771900BBCC28 /* ConfigurationExtensions.swift */,
@@ -431,7 +431,6 @@
 				35890383220365F000BBCC28 /* LocationManagerExtensions.swift in Sources */,
 				3589038F22036DEC00BBCC28 /* MotionManagerMethods.swift in Sources */,
 				358903AD220387BB00BBCC28 /* DeviceMotionSimulator.swift in Sources */,
-				35890393220371B300BBCC28 /* Errors.swift in Sources */,
 				358903962203743F00BBCC28 /* DeviceMovementSimulator.swift in Sources */,
 				3589039F2203764000BBCC28 /* Configuration.swift in Sources */,
 				358903A5220377C200BBCC28 /* Constants.swift in Sources */,
@@ -439,6 +438,7 @@
 				358903B82203964100BBCC28 /* AuthorizationStatusExtensions.swift in Sources */,
 				358903AB220385AD00BBCC28 /* MotionManagerExtensions.swift in Sources */,
 				358903A32203779A00BBCC28 /* ObjectExtensions.swift in Sources */,
+				358903F12204A10F00BBCC28 /* Error.swift in Sources */,
 				358903992203751300BBCC28 /* RequestAuthorization.swift in Sources */,
 				358903A92203837400BBCC28 /* LocationSimulator.swift in Sources */,
 				358903B02203882300BBCC28 /* Simulator.swift in Sources */,
