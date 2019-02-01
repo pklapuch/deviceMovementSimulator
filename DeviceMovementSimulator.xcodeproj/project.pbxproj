@@ -54,8 +54,9 @@
 		358903E32203B82300BBCC28 /* DeviceMovementSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */; };
 		358903E42203B82300BBCC28 /* DeviceMovementSimulator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35890377220365CD00BBCC28 /* DeviceMovementSimulator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		358903EC2203D51000BBCC28 /* TestPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903EB2203D51000BBCC28 /* TestPlayer.swift */; };
-		358903EE2203D66000BBCC28 /* DeviceMotionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */; };
 		358903F12204A10F00BBCC28 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358903F02204A10F00BBCC28 /* Error.swift */; };
+		35D5D7392204E7E600BB1B88 /* LocationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5D7382204E7E600BB1B88 /* LocationUtilities.swift */; };
+		35D5D73B2204E7F400BB1B88 /* DeviceMotionUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5D73A2204E7F400BB1B88 /* DeviceMotionUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +119,9 @@
 		358903DB22039F0300BBCC28 /* MovementMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementMapView.swift; sourceTree = "<group>"; };
 		358903DE2203A1A500BBCC28 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		358903EB2203D51000BBCC28 /* TestPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPlayer.swift; sourceTree = "<group>"; };
-		358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionExtensions.swift; sourceTree = "<group>"; };
 		358903F02204A10F00BBCC28 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		35D5D7382204E7E600BB1B88 /* LocationUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtilities.swift; sourceTree = "<group>"; };
+		35D5D73A2204E7F400BB1B88 /* DeviceMotionUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,8 @@
 				358903982203751300BBCC28 /* RequestAuthorization.swift */,
 				3589039E2203764000BBCC28 /* Configuration.swift */,
 				358903F02204A10F00BBCC28 /* Error.swift */,
+				35D5D7382204E7E600BB1B88 /* LocationUtilities.swift */,
+				35D5D73A2204E7F400BB1B88 /* DeviceMotionUtilities.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -315,7 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				358903EB2203D51000BBCC28 /* TestPlayer.swift */,
-				358903ED2203D66000BBCC28 /* DeviceMotionExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -464,8 +467,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				358903B2220388E600BBCC28 /* MotionManagerObservers.swift in Sources */,
+				35D5D7392204E7E600BB1B88 /* LocationUtilities.swift in Sources */,
 				358903852203688900BBCC28 /* SwizzleHelper.swift in Sources */,
 				3589038A220369B700BBCC28 /* LocationManagerMethods.swift in Sources */,
+				35D5D73B2204E7F400BB1B88 /* DeviceMotionUtilities.swift in Sources */,
 				35890383220365F000BBCC28 /* LocationManagerExtensions.swift in Sources */,
 				3589038F22036DEC00BBCC28 /* MotionManagerMethods.swift in Sources */,
 				358903AD220387BB00BBCC28 /* DeviceMotionSimulator.swift in Sources */,
@@ -496,7 +501,6 @@
 				358903DA22039EFA00BBCC28 /* MovementDataView.swift in Sources */,
 				358903DC22039F0300BBCC28 /* MovementMapView.swift in Sources */,
 				358903C222039C6400BBCC28 /* ViewController.swift in Sources */,
-				358903EE2203D66000BBCC28 /* DeviceMotionExtensions.swift in Sources */,
 				358903C022039C6400BBCC28 /* AppDelegate.swift in Sources */,
 				358903EC2203D51000BBCC28 /* TestPlayer.swift in Sources */,
 			);

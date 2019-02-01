@@ -45,7 +45,7 @@ class TestPlayer: NSObject {
     private func simulateNextItem() {
         coordinate.latitude += 0.0001
         DeviceMovementSimulator.shared.simulate(CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude))
-        DeviceMovementSimulator.shared.simulate(CMDeviceMotion.zero)
+        DeviceMovementSimulator.shared.simulate(DeviceMotionUtilities.zero)
     }
     
     private func startTimer() {
