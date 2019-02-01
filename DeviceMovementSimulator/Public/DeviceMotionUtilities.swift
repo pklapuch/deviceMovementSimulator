@@ -11,24 +11,13 @@ import CoreMotion
 @objc(DMSDeviceMotionUtilities)
 public class DeviceMotionUtilities: NSObject {
     
-    public static var zero: CMDeviceMotion {
+    @objc(createEmptyDeviceMotion)
+    public static func createEmptyDeviceMotion() -> CMDeviceMotion {
         return CMDeviceMotion.zero
     }
     
-    public static func createWith(attitude: CMAttitude? = nil, rotationRate: CMRotationRate? = nil, gravity: CMAcceleration? = nil,  userAcceleration: CMAcceleration? = nil,  magneticFieldValue: CMCalibratedMagneticField? = nil, heading: Double? = nil) -> CMDeviceMotion {
-        
-        let deviceMotion = CMDeviceMotion.DeviceMotion()
-        deviceMotion.attitudeValue = attitude ?? CMAttitude.zero
-        deviceMotion.rotationValue = rotationRate ?? CMRotationRate.zero
-        deviceMotion.gravityValue = gravity ?? CMAcceleration.zero
-        deviceMotion.userAccelerationValue = userAcceleration ?? CMAcceleration.zero
-        deviceMotion.magneticFieldValue = magneticFieldValue ?? CMCalibratedMagneticField.zero
-        deviceMotion.headingValue = heading ?? 0.0
-        
-        return deviceMotion
-    }
-    
-    public static func createAttitude(roll: Double, pitch: Double, yaw: Double) -> CMAttitude {
+    @objc(createAttitudeWithRoll:pitch:yaw:)
+    public static func createAttitudeWith(roll: Double, pitch: Double, yaw: Double) -> CMAttitude {
         
         let attitude = CMAttitude.Attitude()
         attitude.rollValue = roll
@@ -36,6 +25,58 @@ public class DeviceMotionUtilities: NSObject {
         attitude.yawValue = yaw
         
         return attitude
+    }
+}
+
+@objc(DMSDeviceMotionBuilder)
+public class DeviceMotionBuilder: NSObject {
+    
+    fileprivate let deviceMotion: CMDeviceMotion.DeviceMotion
+    
+    public override init() {
+        
+        deviceMotion = CMDeviceMotion.DeviceMotion()
+    }
+    
+    @objc(setAttitude:)
+    public func setAttitude(_ attitude: CMAttitude) {
+        
+        deviceMotion.attitudeValue = attitude
+    }
+    
+    @objc(setRotationRate:)
+    public func setRotationRate(_ rotationRate: CMRotationRate) {
+        
+        deviceMotion.rotationValue = rotationRate
+    }
+    
+    @objc(setGravity:)
+    public func setGravity(_ gravity: CMAcceleration) {
+        
+        deviceMotion.gravityValue = gravity
+    }
+    
+    @objc(setUserAcceleration:)
+    public func setUserAcceleration(_ userAcceleration: CMAcceleration) {
+        
+        deviceMotion.userAccelerationValue = userAcceleration
+    }
+    
+    @objc(setMagneticField:)
+    public func setMagneticField(_ magneticField: CMCalibratedMagneticField) {
+        
+        deviceMotion.magneticFieldValue = magneticField
+    }
+    
+    @objc(setHeading:)
+    public func setHeading(_ heading: Double) {
+        
+        deviceMotion.headingValue = heading
+    }
+    
+    public func build() -> CMDeviceMotion {
+        
+        return deviceMotion
     }
 }
 
@@ -68,31 +109,31 @@ internal extension CMDeviceMotion {
             super.init()
         }
         
-        required init?(coder aDecoder: NSCoder) {
+        internal required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        override var attitude: CMAttitude {
+        internal override var attitude: CMAttitude {
             return attitudeValue
         }
         
-        override var rotationRate: CMRotationRate {
+        internal override var rotationRate: CMRotationRate {
             return rotationValue
         }
         
-        override var gravity: CMAcceleration {
+        internal override var gravity: CMAcceleration {
             return gravityValue
         }
         
-        override var userAcceleration: CMAcceleration {
+        internal override var userAcceleration: CMAcceleration {
             return userAccelerationValue
         }
         
-        override var magneticField: CMCalibratedMagneticField {
+        internal override var magneticField: CMCalibratedMagneticField {
             return magneticFieldValue
         }
         
-        override var heading: Double {
+        internal override var heading: Double {
             return headingValue
         }
     }
