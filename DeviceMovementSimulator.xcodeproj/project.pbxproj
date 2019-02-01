@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		358903F22204A63D00BBCC28 /* UniversalFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 358903F32204A63E00BBCC28 /* Build configuration list for PBXAggregateTarget "UniversalFramework" */;
+			buildPhases = (
+				358903F62204A6E400BBCC28 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalFramework;
+			productName = UniversalFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3589037C220365CD00BBCC28 /* DeviceMovementSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3589037A220365CD00BBCC28 /* DeviceMovementSimulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35890383220365F000BBCC28 /* LocationManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35890382220365F000BBCC28 /* LocationManagerExtensions.swift */; };
@@ -379,6 +393,9 @@
 							};
 						};
 					};
+					358903F22204A63D00BBCC28 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 35890371220365CD00BBCC28 /* Build configuration list for PBXProject "DeviceMovementSimulator" */;
@@ -396,6 +413,7 @@
 			targets = (
 				35890376220365CD00BBCC28 /* DeviceMovementSimulator */,
 				358903BC22039C6400BBCC28 /* DeviceMovementSimulatorDemo */,
+				358903F22204A63D00BBCC28 /* UniversalFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -419,6 +437,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		358903F62204A6E400BBCC28 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./FatFramework.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35890373220365CD00BBCC28 /* Sources */ = {
@@ -707,6 +745,24 @@
 			};
 			name = Release;
 		};
+		358903F42204A63E00BBCC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		358903F52204A63E00BBCC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y545S76C5X;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -733,6 +789,15 @@
 			buildConfigurations = (
 				358903CD22039C6500BBCC28 /* Debug */,
 				358903CE22039C6500BBCC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		358903F32204A63E00BBCC28 /* Build configuration list for PBXAggregateTarget "UniversalFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				358903F42204A63E00BBCC28 /* Debug */,
+				358903F52204A63E00BBCC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
