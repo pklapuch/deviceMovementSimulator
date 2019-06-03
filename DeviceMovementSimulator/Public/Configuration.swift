@@ -17,8 +17,9 @@ public class Configuration: NSObject {
      */
     let simulateBackgroundUpdates: Bool
     
-    public init(simulateBackgroundUpdates: Bool? = nil) {
+    @objc(init:)
+    public init(simulateBackgroundUpdates: Bool) {
         
-        self.simulateBackgroundUpdates = simulateBackgroundUpdates ?? false
+        self.simulateBackgroundUpdates = simulateBackgroundUpdates
     }
 }

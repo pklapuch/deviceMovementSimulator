@@ -13,7 +13,7 @@ extension Configuration {
     
     internal static var initial: Configuration {
         
-        return Configuration()
+        return Configuration(simulateBackgroundUpdates: false)
     }
     
     internal func createLocationManager() -> CLLocationManager {
