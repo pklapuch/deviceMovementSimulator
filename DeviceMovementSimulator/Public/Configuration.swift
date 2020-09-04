@@ -13,7 +13,7 @@ public class Configuration: NSObject {
     
     /** If false, simulation will not subscribe to system location updates -> simulation will only work in foreground
         If true, simulation will register background updates with system -> simulation can run in background
-        Background operation is only possible provided user has accepted privacy settings
+        Background operation is only possible provided user has accepted privacy settings 
      */
     let simulateBackgroundUpdates: Bool
     
